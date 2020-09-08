@@ -86,7 +86,7 @@ updateUser = (data) => {
   
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input});
-    fetch('https://nameless-reaches-51523.herokuapp.com//imageUrl', {
+    fetch('https://nameless-reaches-51523.herokuapp.com/imageUrl', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
@@ -96,7 +96,7 @@ updateUser = (data) => {
     .then(response => response.json())
         .then(response => {
           if (response) {
-          fetch('https://nameless-reaches-51523.herokuapp.com//image', {
+          fetch('https://nameless-reaches-51523.herokuapp.com/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
